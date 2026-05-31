@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-white text-center my-4">Student</h2>
+<table class="table table-dark table-striped w-50 mx-auto">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">#</th>
+        <th scope="col">#</th>
+        
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Username</td>
+        <td>{{student.student}}</td>
+    </tr>
+    <tr>
+        <th scope="row">2</th>
+        <td>Active</td>
+        {% if student.is_active %}
+        <td>Yes</td>
+        {% else %}
+        <td>No</td>
+        {% endif %}
+    </tr>
+    <tr>
+        <th scope="row">3</th>
+        <td>Start Year</td>
+        <td>{{student.start_year}}</td>
+    </tr>
+    <tr>
+        <th scope="row">4</th>
+        <td>End Year</td>
+        <td>{{student.end_year}}</td>
+    </tr>
+    <tr>
+        <th scope="row">5</th>
+        <td>Gender</td>
+        <td>{{student.gender}}</td>
+    </tr>
+    <tr>
+        <th scope="row">6</th>
+        <td>Religion</td>
+        <td>{{student.religion}}</td>
+    </tr>
+    <tr>
+        <th scope="row">7</th>
+        <td>Course</td>
+        <td>{{student.course}}</td>
+    </tr>
+    <tr>
+        <th scope="row">8</th>
+        <td>Class</td>
+        <td>{{student.clas}}</td>
+    </tr>
+    <tr>
+        <th scope="row">9</th>
+        <td>Duration</td>
+        <td>{{student.duration}}</td>
+    </tr>
+    <tr>
+        <th scope="row">10</th>
+        <td>Course Fee</td>
+        <td>{{student.course_fee}}</td>
+    </tr>
+    <tr>
+        <th scope="row">11</th>
+        <td>Student Name</td>
+        <td>{{student.std_name}}</td>
+    </tr>
+    <tr>
+        <th scope="row">12</th>
+        <td>Father Name</td>
+        <td>{{student.father_name}}</td>
+    </tr>
+    <tr>
+        <th scope="row">13</th>
+        <td>Student CNIC</td>
+        <td>{{student.std_cnic}}</td>
+    </tr>
+    <tr>
+        <th scope="row">14</th>
+        <td>Father CNIC</td>
+        <td>{{student.father_cnic}}</td>
+    </tr>
+    <tr>
+        <th scope="row">15</th>
+        <td>Student No</td>
+        <td>{{student.std_no}}</td>
+    </tr>
+    <tr>
+        <th scope="row">16</th>
+        <td>Father No</td>
+        <td>{{student.father_no}}</td>
+    </tr>
+    <tr>
+        <th scope="row">17</th>
+        <td>Date Of Birth</td>
+        <td>{{student.dob}}</td>
+    </tr>
+    <tr>
+        <th scope="row">18</th>
+        <td>Blood Group</td>
+        <td>{{student.blood_group}}</td>
+    </tr>
+    <tr>
+        <th scope="row">19</th>
+        <td>City</td>
+        <td>{{student.city}}</td>
+    </tr>
+    <tr>
+        <th scope="row">20</th>
+        <td>Completed</td>
+        <td>{{student.is_completed}}</td>
+    </tr>
+    <tr>
+        <th scope="row">21</th>
+        <td>Degree Issued</td>
+        <td>{{student.is_degree_issued}}</td>
+    </tr>
+    <tr>
+        <th scope="row">22</th>
+        <td>Address</td>
+        <td>{{student.address}}</td>
+    </tr>
+      
+    </tbody>
+  </table>
+{% endblock content %}

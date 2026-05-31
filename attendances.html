@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-white text-center my-4">Attendances</h2>
+<table class="table table-dark table-striped w-50 mx-auto">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">class</th>
+        <th scope="col">lectures</th>
+        <th scope="col">attended</th>
+        <th scope="col">leaves</th>
+        <th scope="col">absents</th>
+        <th scope="col">month</th>
+        <th scope="col">year</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for attendance in attendances %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{attendance.clas}}</td>
+        <td>{{attendance.lectures}}</td>
+        <td>{{attendance.attended}}</td>
+        <td>{{attendance.leaves}}</td>
+        <td>{{attendance.absents}}</td>
+        <td>{{attendance.month}}</td>
+        <td>{{attendance.year}}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+
+  {% endblock content %}

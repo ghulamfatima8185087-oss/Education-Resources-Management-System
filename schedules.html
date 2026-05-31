@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-white text-center my-4">Schedules</h2>
+<table class="table table-dark table-striped w-50 mx-auto">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">class</th>
+        <th scope="col">schedule_name</th>
+        <th scope="col">Teacher</th>
+        <th scope="col">subject</th>
+        <th scope="col">day</th>
+        <th scope="col">time</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for schedule in schedules %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{schedule.clas}}</td>
+        <td>{{schedule.schedule_name}}</td>
+        <td>{{schedule.teacher}}</td>
+        <td>{{schedule.subject}}</td>
+        <td>{{schedule.day}}</td>
+        <td>{{schedule.time}}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+{% endblock content %}

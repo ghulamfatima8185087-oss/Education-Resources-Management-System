@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="text-white text-center my-4">Exams</h2>
+<table class="table table-dark table-striped w-50 mx-auto">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">class</th>
+        <th scope="col">exam_name</th>
+        <th scope="col">subject</th>
+        <th scope="col">date_time</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for exam in exams %}
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{exam.clas}}</td>
+        <td>{{exam.exam_name}}</td>
+        <td>{{exam.subject}}</td>
+        <td>{{exam.date_time}}</td>
+      </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+{% endblock content %}
